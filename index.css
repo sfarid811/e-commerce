@@ -1,0 +1,495 @@
+
+/****************CEDRIC **********************************/
+.card_product{
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 0.5em;
+/*	border: 2px solid black;   */
+}
+
+.cont_1{display:flex;
+	justify-content:space-between;
+}
+
+div #Collection{
+	font-family: 'Roboto', sans-serif;
+	
+}
+.Category p{
+	color:grey;
+}
+.caddie{
+	display: flex;
+	justify-content: flex-end;
+	padding: 0;
+	align-items: end;
+}
+.card{
+	border:none;
+	padding-bottom: 3em;
+}
+
+.cont_2{display:flex;
+	justify-content:space-between;
+}
+
+.stars{
+	display:inline-block;
+	justify-content:space-between; 
+	display: w-100 h-100; 
+}
+
+.star_On{
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+}
+
+.star_Off{
+	margin-left: 0.05em;
+	margin-right: 0.05em;
+}
+
+div #cont_btn_panier{
+	display:flex;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	align-content:right;
+	align-content:bottom;
+	align-content: mb-auto;
+}
+
+.cont_btn_panier{
+	display:flex;
+	bottom:0;
+	right:0;
+	padding-right:0px;
+	padding-bottom:0px;
+	vertical-align: baseline;
+}
+
+
+@media (max-width:991px){
+	.content_div{
+		margin:auto;
+		max-width: 400px;
+	}
+}
+@media (max-device-width:980px){
+	#conteneur_global{
+		max-width: 100%;
+	}
+	.content_div{
+		max-width: 100%;
+	}
+	.card_product{
+		padding:1em;
+	}
+	
+}
+
+
+/****************VINCENT **********************************/
+p, label{
+	font-family: 'Roboto';
+}
+/********************FILTER BY*******************/
+.selector{
+	width:100%;/*pour êtresur de ne plus voir la flèche pour les navigateurs qui ne supportenet pas appearance : none*/
+	overflow: hidden;
+	display: flex;
+	margin:auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #eaeaea ;
+  }
+  .selector>select{
+  width:100%;/*pour êtresur de ne plus voir la flèche pour les navigateurs qui ne supportenet pas appearance : none*/
+  background-color: transparent;
+  border:none;
+  appearance: none;
+  grid-template-areas: "select";
+  z-index: 2;
+  }
+  .selector::after{
+	content:"v";
+	position: absolute;
+	right:20px;
+	font-size: 0.7em;
+	font-weight: bold;
+	z-index: 1;
+	transform:scale(1.7,1);
+  }
+  select, .selector::after{
+	grid-area:select;
+  }
+  .col-lg-3:nth-child(1) p, .col-sm-12:nth-child(1) p{
+  color:#96979b;/*filter by*/
+  font-size: 0.8em;
+  margin:auto;
+  }
+  .slider>label{
+  width: 100%;
+  }
+  #first_silder{
+	padding-top: 1em;
+  }
+  .slider input{
+	width: 100%;
+  }
+  .slider>div{
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  /**************FOOTER*************/
+  footer{
+	height:200px;
+  }
+  .div_footer{
+	display: flex;
+	height: 45px;
+  }
+  .numbers p{
+	height: 45px;
+	width: 45px;
+	padding: 10px;
+	text-align: center;
+	color:#22232b;
+  }
+  .numbers{
+	margin-right: 1.2em;
+  }
+  .numbers p:hover{
+	background-color: #22232b;
+	color:white;
+  }
+  .numbers a:hover{
+	text-decoration: none;
+  }
+  #current_page p{
+	background-color: #22232b;
+	color:white;
+  }
+  #checkbox_div>label, #checkbox_div>input{
+	display: none;
+  }
+  /**************MOBILE**************/
+  @media (max-width: 800px), all and (max-device-width: 980px){
+	  .numbers:nth-child(6),.numbers:nth-child(7),.numbers:nth-child(8),.numbers:nth-child(9),.numbers:nth-child(10){
+	  display: none;
+	  }
+	  .numbers{
+		margin-right: auto;
+	  }
+	  .selector, .slider, #checkbox_div p{
+		display: none;
+	  }
+	  #checkbox_div{
+		width:100%;/*pour êtresur de ne plus voir la flèche pour les navigateurs qui ne supportenet pas appearance : none*/
+	overflow: hidden;
+	margin:auto;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #eaeaea ;
+	  }
+	  #checkbox_div label, selector_sarah{
+		display: flex;
+		background-color: transparent;
+		border:none;
+		appearance: none;
+		z-index: 2;
+		}
+		.selector_sarah{
+			margin-left: 15px;
+			margin-right: 15px;
+			flex-wrap: nowrap;
+		}
+		#label_filter::after, .selector_sarah::after{
+		  content:"v";
+		  position: absolute;
+		  right:20px;
+		  font-size: 1.2em;
+		  font-weight: lighter;
+		  z-index: 1;
+		  transform:scale(1.7,1);
+		}
+		
+		.selector_sarah select{
+			color: black;
+		}
+		.selector_sarah::after{
+			right:35px;
+		}
+		#filter:checked~.selector,#filter:checked~.slider {
+				display: block;
+			
+		}
+
+  }
+
+
+  /****************************SARAH*********************/
+  @font-face{
+	font-family: 'Metropolis';
+	src: url('fonts/Metropolis/Metropolis-Regular.otf') format('otf');
+  }
+  
+  
+  @font-face{
+	font-family: 'Metropolis-Bold';
+	src: url('fonts/Metropolis/Metropolis-SemiBold.otf') format('otf');
+  }
+  
+  .container{
+	  background-color: white;  
+  }
+
+  
+  
+  /*-------responsive partie Sarah--------*/
+	@media screen and (max-width: 800px)
+	{
+		.connexion{
+		  display: none;
+		}
+		.nav__icon{
+		  display: block;
+		  width: 30px;
+		  height: 30px;
+		  cursor: pointer;
+		
+		}
+		.nav__icon img{
+		  height: 20px;
+		  width: auto;
+		  margin-left: 10px;
+		}
+  
+		.menu{
+		  display: none;
+		}
+	  
+		.search_bar img{
+		  display: none;           
+	   }
+  
+	   .container{
+		 padding-left: 0;
+	   } 
+	   .selector_sarah{
+		width: 70%;
+		margin-left: 80px;
+	}
+
+
+  
+	  }
+  
+  
+	 @media screen and (min-width: 800px){
+	  .nav__icon{
+		display: none;         
+	  }
+	 }
+  
+  
+	 @media screen and (max-width: 572px){
+		.loupe_parent img{
+		  transform: scale(0.7);
+		  margin-top: 10px;
+		  }
+		.search_parent{
+		 margin-left: 2px;
+		 width: 80%;
+		 margin-top: 0;        
+		}  
+		.container{
+		  padding-left: 0;
+		} 
+		.loupe_parent{
+		  padding-right: 0;
+		  width: 10%;
+		}
+		.selector_sarah{
+			width: 75%;
+			margin-right: 0;
+		}
+	  }
+  
+  
+  
+  
+  /*-----------header----------*/
+  
+  
+  .header{
+	display: flex;
+	justify-content: space-between;
+   }
+  
+  
+  
+  .logo{
+	height: 50px;
+	width: auto;
+	float: left;
+	margin-right: 20px;
+  
+  
+  }
+  
+  /*-------order--------*/
+  
+  .header :nth-child(1){
+	order: 5;
+  }
+  
+  .header :nth-child(2){
+	order: 1;
+  }
+  
+  .header :nth-child(3){
+	order: 3;
+  }
+  
+  .header :nth-child(4){
+	order: 4;
+  }
+  
+  
+  
+  
+  /*-------menu--------*/
+  
+  
+  .menu{
+	float: left;
+  }
+  
+  .menu a{
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	font-size: 0.8em;
+	padding-left: 2px;
+	padding-right: 2px;
+  }
+  .menu a:hover{
+	text-decoration: none;
+	color: grey;
+  }
+  
+  
+  /*----panier+login----*/
+  .pictos{
+	margin-left: auto;
+  }
+  
+  
+  
+  .connexion{
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8em;
+	margin-left: 10px;
+	vertical-align:middle;
+  }
+  
+  .connexion:hover{
+	text-decoration: none;
+	color: grey;
+  }
+  
+  
+  
+  
+  /*----div pour  loupe search bar et best match----*/
+  .search_best{
+	display: flex; 
+	padding-bottom: 1em; 
+  }
+  
+  
+  .loupe_parent img{
+	margin-top: 5px;
+	margin-left: 8px;
+	margin-bottom: 2px;
+	height:35px;
+	width:auto;
+  
+  }
+  
+  
+  /*----search bar----*/
+  .search_bar{
+	border-bottom: 2px solid black;
+	margin-left: 20px;
+	margin-bottom: 2px;
+	display: flex;
+  
+  }
+  
+  .search_bar>input{
+	border: none;
+  }
+  
+  
+  ::placeholder{
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+	color: black;
+  }
+  
+  
+  /*----logo Sajari---- */
+  .search_bar img{
+	 height: 16px;
+	 width: auto;
+	 margin-top: 15px;
+  
+  }
+  
+  
+  
+  /*----Best match----*/
+  .selector_sarah{
+	overflow: hidden;
+	display: flex;
+	border-bottom: 1px solid #eaeaea ;
+	margin-top: 15px;
+  
+  }
+  .selector_sarah>select{
+	width:100%;/*pour êtresur de ne plus voir la flèche pour les navigateurs qui ne supportenet pas appearance : none*/
+	background-color: transparent;
+	border:none;
+	appearance: none;
+	grid-template-areas: "select";
+	z-index: 2;
+	}
+
+.selector_sarah::after{
+	content:"v";
+	position: absolute;
+	right:10px;
+	bottom : 2px;
+	font-size: 1em;
+	z-index: 1;
+	transform:scale(1.7,1);
+	cursor: pointer;
+ }
+  
+  select, .selector_sarah::after{
+	grid-area:select;
+  }
+  
+  .selector_sarah select{
+	cursor: pointer;
+  }
+  
+
+	  
+  
+  
